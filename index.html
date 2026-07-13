@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="R&E Multiservices offers TV mounting, audio and projector installation, furniture assembly, dryer vent cleaning, and residential or commercial cleaning in Davenport and the Orlando area.">
+<title>R&E Multiservices | Mounting, Maintenance & Cleaning</title>
+<style>
+:root{
+  --black:#090909; --black2:#121212; --panel:#181818; --gold:#d3a640;
+  --gold2:#f0d783; --silver:#b8bec3; --white:#fff; --muted:#c5c5c5;
+  --line:rgba(211,166,64,.28); --shadow:0 18px 50px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0a0a0a;color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:#050505;border-bottom:1px solid var(--line);font-size:.9rem;color:#ddd}
+.topbar .container{display:flex;justify-content:space-between;gap:20px;padding:9px 0;flex-wrap:wrap}
+nav{position:sticky;top:0;z-index:10;background:rgba(9,9,9,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:13px;font-weight:800;letter-spacing:.5px}
+.brand img{width:66px;height:66px;object-fit:contain}
+.brand small{display:block;color:var(--gold2);font-weight:500;letter-spacing:.4px}
+.nav-right{display:flex;align-items:center;gap:18px}
+.links{display:flex;gap:22px;align-items:center}
+.links a:hover{color:var(--gold2)}
+.lang-switch{display:flex;border:1px solid var(--gold);border-radius:999px;padding:3px;background:#111}
+.lang-switch button{border:0;background:transparent;color:#ddd;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
+.lang-switch button.active{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#111}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:999px;font-weight:800;border:1px solid transparent;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#111;box-shadow:0 10px 30px rgba(211,166,64,.2)}
+.btn-outline{border-color:var(--gold);color:var(--gold2);background:rgba(0,0,0,.24)}
+.hero{position:relative;overflow:hidden;padding:88px 0 76px;background:
+ radial-gradient(circle at 80% 25%,rgba(211,166,64,.21),transparent 27%),
+ linear-gradient(125deg,#070707 25%,#141414 70%,#0c0c0c)}
+.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+.kicker{color:var(--gold2);text-transform:uppercase;letter-spacing:3px;font-size:.82rem;font-weight:900}
+h1{font-family:Georgia,serif;font-size:clamp(2.5rem,5vw,4.9rem);line-height:1.03;margin:.25em 0;color:#fff}
+h1 span{color:var(--gold2)}
+.hero p{color:#d9d9d9;font-size:1.1rem;max-width:720px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:31px;color:#ddd;font-size:.93rem}
+.trust b{color:var(--gold2)}
+.hero-card{background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+.hero-card img{display:block;width:min(330px,85%);margin:0 auto 18px}
+.hero-card h3{font-size:1.4rem;margin:0 0 10px}
+.hero-list{display:grid;gap:11px;color:#ddd}
+.hero-list span:before{content:"✓";color:var(--gold2);font-weight:900;margin-right:9px}
+section{padding:78px 0}
+.section-head{max-width:780px;margin:0 auto 38px;text-align:center}
+.section-head h2{font-family:Georgia,serif;font-size:clamp(2rem,4vw,3.15rem);margin:.2em 0}
+.section-head p{color:var(--muted)}
+.services{background:#101010}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:linear-gradient(145deg,#1a1a1a,#121212);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:25px;box-shadow:0 10px 26px rgba(0,0,0,.18)}
+.card:hover{border-color:var(--line);transform:translateY(-3px);transition:.2s}
+.icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(211,166,64,.12);color:var(--gold2);font-size:1.45rem;margin-bottom:15px}
+.card h3{margin:0 0 8px;font-size:1.18rem}
+.card p{margin:0;color:#bbb;font-size:.94rem}
+.band{background:linear-gradient(90deg,#b6811f,#f0d783,#b6811f);color:#111;padding:27px 0}
+.band .container{display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}
+.band h2{margin:0;font-family:Georgia,serif}
+.cleaning{background:linear-gradient(180deg,#0a0a0a,#141414)}
+.feature-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.feature{border-left:3px solid var(--gold);padding:14px 0 14px 20px}
+.feature h3{margin:0 0 7px}
+.feature p{margin:0;color:#bbb}
+.area{background:#111}
+.area-box{display:grid;grid-template-columns:1fr .8fr;gap:30px;align-items:center;background:#171717;border:1px solid var(--line);border-radius:26px;padding:34px}
+.area ul{columns:2;padding-left:20px;color:#ddd}
+.contact{background:radial-gradient(circle at 20% 20%,rgba(211,166,64,.18),transparent 25%),#090909}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact-card{background:#151515;border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:30px}
+.contact-row{display:flex;gap:13px;align-items:flex-start;margin:17px 0}
+.contact-row strong{display:block;color:var(--gold2)}
+.notice{margin-top:18px;padding:14px 16px;border-radius:14px;background:rgba(211,166,64,.1);border:1px solid var(--line);color:#e7d9ac}
+.reviews{background:#101010}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{background:#181818;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:22px}
+.review .stars{color:var(--gold2);letter-spacing:3px}
+.review em{display:block;color:#aaa;font-size:.82rem;margin-top:13px}
+.review-placeholder{border-style:dashed}
+footer{background:#050505;border-top:1px solid rgba(255,255,255,.08);padding:32px 0;color:#aaa}
+.footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.mobile-bar{display:none}
+[data-lang]{display:none}
+html[lang="en"] [data-lang="en"], html[lang="es"] [data-lang="es"]{display:revert}
+@media(max-width:980px){
+  .links{display:none}.hero-grid,.feature-wrap,.area-box,.contact-grid{grid-template-columns:1fr}
+  .hero-card{max-width:560px}.grid,.review-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  .topbar{display:none}.nav{min-height:72px}.brand img{width:54px;height:54px}.brand span{font-size:.92rem}
+  .nav-right{gap:8px}.lang-switch button{padding:7px 9px;font-size:.78rem}
+  .hero{padding:60px 0 54px}.grid,.review-grid{grid-template-columns:1fr}
+  .area ul{columns:1}.actions .btn{width:100%}section{padding:60px 0}
+  body{padding-bottom:72px}.mobile-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:20}
+  .mobile-bar a{padding:15px 8px;text-align:center;font-weight:900}
+  .mobile-bar a:first-child{background:#eee;color:#111}.mobile-bar a:last-child{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#111}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="container">
+    <span data-lang="en">Davenport, Four Corners and the Orlando area</span>
+    <span data-lang="es">Davenport, Four Corners y área de Orlando</span>
+    <span data-lang="en">Direct assistance by Roger Cabrera · Manager</span>
+    <span data-lang="es">Atención directa por Roger Cabrera · Manager</span>
+  </div>
+</div>
+
+<nav>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="R&E Multiservices">
+      <img src="logo-rande.svg" alt="R&E Multiservices logo">
+      <span>R&amp;E MULTISERVICES
+        <small data-lang="en">Solutions for your home and business</small>
+        <small data-lang="es">Soluciones para su hogar y negocio</small>
+      </span>
+    </a>
+    <div class="nav-right">
+      <div class="links">
+        <a href="#services"><span data-lang="en">Services</span><span data-lang="es">Servicios</span></a>
+        <a href="#cleaning"><span data-lang="en">Cleaning</span><span data-lang="es">Limpieza</span></a>
+        <a href="#area"><span data-lang="en">Service Area</span><span data-lang="es">Área de servicio</span></a>
+        <a href="#contact"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+      </div>
+      <div class="lang-switch" aria-label="Language selector">
+        <button id="btn-en" class="active" type="button" onclick="setLang('en')">EN</button>
+        <button id="btn-es" type="button" onclick="setLang('es')">ES</button>
+      </div>
+      <a class="btn btn-gold" href="tel:+17863032835">
+        <span data-lang="en">Call now</span><span data-lang="es">Llamar ahora</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker"><span data-lang="en">Mounting · Maintenance · Cleaning</span><span data-lang="es">Montaje · Mantenimiento · Limpieza</span></div>
+      <h1 data-lang="en">One team to <span>get more done</span></h1>
+      <h1 data-lang="es">Un solo equipo para <span>resolver más</span></h1>
+      <p data-lang="en">We mount, install, assemble, clean and prepare residential and commercial spaces with careful work, direct communication and practical solutions.</p>
+      <p data-lang="es">Montamos, instalamos, ensamblamos, limpiamos y dejamos cada espacio listo para usarse. Atención residencial y comercial con comunicación directa, trabajo cuidadoso y soluciones prácticas.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="sms:+17863032835?&body=Hello%20Roger,%20I%20need%20a%20quote%20for:">
+          <span data-lang="en">Send a text message</span><span data-lang="es">Enviar mensaje de texto</span>
+        </a>
+        <a class="btn btn-outline" href="tel:+17863032835">
+          <span data-lang="en">Call 786-303-2835</span><span data-lang="es">Llamar al 786-303-2835</span>
+        </a>
+      </div>
+      <div class="trust">
+        <span><b>✓</b> <span data-lang="en">Photo-based quotes</span><span data-lang="es">Cotización por fotos</span></span>
+        <span><b>✓</b> <span data-lang="en">Assistance by Roger Cabrera</span><span data-lang="es">Atención por Roger Cabrera</span></span>
+        <span><b>✓</b> <span data-lang="en">Residential and commercial</span><span data-lang="es">Residencial y comercial</span></span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="logo-rande.svg" alt="R&E Multiservices">
+      <h3 data-lang="en">What do you need help with today?</h3>
+      <h3 data-lang="es">¿Qué necesita resolver hoy?</h3>
+      <div class="hero-list">
+        <span data-lang="en">TV mounting and audio systems</span><span data-lang="es">Montaje de televisores y sistemas de audio</span>
+        <span data-lang="en">Projectors, shelves and furniture</span><span data-lang="es">Proyectores, repisas y muebles</span>
+        <span data-lang="en">Dryer interior and vent cleaning</span><span data-lang="es">Limpieza de secadora y ductos</span>
+        <span data-lang="en">Recurring, deep and move-out cleaning</span><span data-lang="es">Limpieza recurrente, profunda y de mudanza</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker"><span data-lang="en">Main services</span><span data-lang="es">Servicios principales</span></div>
+      <h2 data-lang="en">Mounting and installation without the hassle</h2>
+      <h2 data-lang="es">Montaje e instalación sin complicaciones</h2>
+      <p data-lang="en">Choose the service you need and send a photo, approximate measurements and your location for a quote.</p>
+      <p data-lang="es">Seleccione el servicio que necesita y envíenos una foto, medidas aproximadas y su ubicación para preparar una cotización.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="icon">▣</div><h3 data-lang="en">TV mounting</h3><h3 data-lang="es">Montaje de televisores</h3><p data-lang="en">Different TV sizes, fixed or full-motion mounts, standard walls and special installations.</p><p data-lang="es">Televisores de distintos tamaños, soportes fijos o articulados, paredes estándar y configuraciones especiales.</p></article>
+      <article class="card"><div class="icon">♫</div><h3 data-lang="en">Audio systems</h3><h3 data-lang="es">Sistemas de audio</h3><p data-lang="en">Soundbars, speakers, 2.1 and 5.1 systems, cable organization and basic setup.</p><p data-lang="es">Soundbars, bocinas, sistemas 2.1 y 5.1, organización de cables y configuración básica.</p></article>
+      <article class="card"><div class="icon">◉</div><h3 data-lang="en">Projectors</h3><h3 data-lang="es">Proyectores</h3><p data-lang="en">Mounting, alignment, screens, connection organization and initial setup.</p><p data-lang="es">Montaje de soporte, alineación, pantalla, organización de conexiones y configuración inicial.</p></article>
+      <article class="card"><div class="icon">☀</div><h3 data-lang="en">Outdoor and pool-area TVs</h3><h3 data-lang="es">TV para piscina o exterior</h3><p data-lang="en">Mounting for patios, terraces and pool areas, based on height, support and exposure.</p><p data-lang="es">Montaje en patios, terrazas y áreas de piscina, considerando soporte, altura y exposición.</p></article>
+      <article class="card"><div class="icon">▤</div><h3 data-lang="en">Shelves and storage</h3><h3 data-lang="es">Repisas y estantes</h3><p data-lang="en">Floating shelves, shelving units, wall consoles, cabinets and organizers.</p><p data-lang="es">Repisas flotantes, estanterías, consolas, gabinetes de pared y organizadores.</p></article>
+      <article class="card"><div class="icon">⌂</div><h3 data-lang="en">Furniture assembly</h3><h3 data-lang="es">Ensamblaje de muebles</h3><p data-lang="en">Beds, desks, dressers, drawers, tables, patio furniture and boxed furniture.</p><p data-lang="es">Camas, escritorios, cómodas, cajoneras, mesas, muebles de patio y muebles empacados.</p></article>
+      <article class="card"><div class="icon">⚙</div><h3 data-lang="en">Equipment and accessories</h3><h3 data-lang="es">Equipos y accesorios</h3><p data-lang="en">Gym equipment, monitor mounts, headboards, curtain rods and organizers.</p><p data-lang="es">Equipos de gimnasio, soportes para monitor, cabeceras, barras de cortina y organizadores.</p></article>
+      <article class="card"><div class="icon">⌁</div><h3 data-lang="en">Doors, drawers and cabinets</h3><h3 data-lang="es">Puertas, gavetas y gabinetes</h3><p data-lang="en">Door adjustments, hinges, handles, locks, drawer slides and minor functional repairs.</p><p data-lang="es">Ajuste de puertas, bisagras, manijas, cerraduras, correderas y reparaciones menores.</p></article>
+      <article class="card"><div class="icon">＋</div><h3 data-lang="en">Other services</h3><h3 data-lang="es">Otros servicios</h3><p data-lang="en">Mirrors, wall art, blinds, bathroom accessories, video doorbells and smart locks.</p><p data-lang="es">Espejos, cuadros, persianas, accesorios de baño, timbres con video y cerraduras inteligentes.</p></article>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="container">
+    <h2 data-lang="en">Send photos and receive an initial quote</h2>
+    <h2 data-lang="es">Envíe fotos y reciba una cotización inicial</h2>
+    <a class="btn" style="background:#111;color:#fff" href="sms:+17863032835?&body=Hello%20Roger,%20I%20want%20to%20send%20photos%20for%20a%20quote.">
+      <span data-lang="en">Text us</span><span data-lang="es">Mensaje de texto</span>
+    </a>
+  </div>
+</div>
+
+<section class="cleaning" id="cleaning">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker"><span data-lang="en">Maintenance and cleaning</span><span data-lang="es">Mantenimiento y limpieza</span></div>
+      <h2 data-lang="en">Better care for spaces and equipment</h2>
+      <h2 data-lang="es">Espacios y equipos mejor cuidados</h2>
+    </div>
+    <div class="feature-wrap">
+      <div class="feature"><h3 data-lang="en">Dryer interior cleaning</h3><h3 data-lang="es">Limpieza interior de secadora</h3><p data-lang="en">Removal of accessible lint and debris inside the unit, depending on model and condition.</p><p data-lang="es">Retiro de pelusa y suciedad accesible dentro del equipo, según modelo y condición.</p></div>
+      <div class="feature"><h3 data-lang="en">Dryer vent cleaning</h3><h3 data-lang="es">Limpieza de ducto de secadora</h3><p data-lang="en">Cleaning the exhaust vent or duct to remove buildup that reduces airflow.</p><p data-lang="es">Limpieza de la ventilación o tubo de salida para remover acumulaciones que reducen el flujo de aire.</p></div>
+      <div class="feature"><h3 data-lang="en">Recurring cleaning</h3><h3 data-lang="es">Limpieza recurrente</h3><p data-lang="en">Scheduled service for homes, apartments, offices and frequently used spaces.</p><p data-lang="es">Servicio periódico para hogares, apartamentos, oficinas y espacios de uso frecuente.</p></div>
+      <div class="feature"><h3 data-lang="en">Deep cleaning</h3><h3 data-lang="es">Limpieza profunda</h3><p data-lang="en">Detailed cleaning for kitchens, bathrooms, surfaces and high-use areas.</p><p data-lang="es">Limpieza detallada para cocinas, baños, superficies y áreas de uso frecuente.</p></div>
+      <div class="feature"><h3 data-lang="en">Move-in / move-out cleaning</h3><h3 data-lang="es">Limpieza de mudanza</h3><p data-lang="en">Cleaning for empty homes, apartments or spaces before move-in or final delivery.</p><p data-lang="es">Limpieza de viviendas, apartamentos o espacios vacíos antes de ocuparlos o entregarlos.</p></div>
+      <div class="feature"><h3 data-lang="en">Vacant commercial spaces</h3><h3 data-lang="es">Limpieza de locales vacíos</h3><p data-lang="en">Preparation of vacant commercial spaces for inspection, leasing or reopening.</p><p data-lang="es">Preparación de locales vacíos para inspección, alquiler o nueva operación.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="container area-box">
+    <div>
+      <div class="kicker"><span data-lang="en">Service area</span><span data-lang="es">Área de servicio</span></div>
+      <h2 data-lang="en">Davenport and nearby communities</h2>
+      <h2 data-lang="es">Davenport y comunidades cercanas</h2>
+      <p data-lang="en">We primarily serve Davenport, Four Corners and parts of the Orlando area. For farther locations, please confirm availability and travel fees.</p>
+      <p data-lang="es">Atendemos principalmente Davenport, Four Corners y sectores del área de Orlando. Para ubicaciones más alejadas, confirme disponibilidad y cargo de desplazamiento.</p>
+      <ul>
+        <li>Davenport</li><li>Four Corners</li><li>ChampionsGate</li><li>Clermont</li><li>Kissimmee</li><li>Orlando area</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 data-lang="en">For a faster quote</h3><h3 data-lang="es">Para cotizar más rápido</h3>
+      <p data-lang="en">Text photos, service type, item size or model, ZIP code and preferred date.</p>
+      <p data-lang="es">Envíe fotos, tipo de servicio, tamaño o modelo, código postal y fecha preferida.</p>
+      <a class="btn btn-gold" style="margin-top:18px" href="sms:+17863032835?&body=Hello%20Roger.%0AService:%20____%0AZIP%20code:%20____%0APreferred%20date:%20____">
+        <span data-lang="en">Request a quote</span><span data-lang="es">Solicitar cotización</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker"><span data-lang="en">Trust</span><span data-lang="es">Confianza</span></div>
+      <h2 data-lang="en">Space for verified reviews</h2>
+      <h2 data-lang="es">Espacio para reseñas verificadas</h2>
+      <p data-lang="en">Replace these placeholders with real reviews from Google, Angi or authorized clients.</p>
+      <p data-lang="es">Sustituya estos espacios por reseñas reales de Google, Angi o clientes autorizados.</p>
+    </div>
+    <div class="review-grid">
+      <div class="review review-placeholder"><div class="stars">★★★★★</div><p data-lang="en">“Add a real review about TV mounting or audio installation.”</p><p data-lang="es">“Añada una reseña real sobre montaje de TV o instalación de audio.”</p><strong data-lang="en">Customer name</strong><strong data-lang="es">Nombre del cliente</strong><em data-lang="en">Placeholder — do not publish as a real review</em><em data-lang="es">Plantilla — no publicar como testimonio real</em></div>
+      <div class="review review-placeholder"><div class="stars">★★★★★</div><p data-lang="en">“Add a real review about furniture assembly or shelf installation.”</p><p data-lang="es">“Añada una reseña real sobre ensamblaje de muebles o instalación de repisas.”</p><strong data-lang="en">Customer name</strong><strong data-lang="es">Nombre del cliente</strong><em data-lang="en">Placeholder — do not publish as a real review</em><em data-lang="es">Plantilla — no publicar como testimonio real</em></div>
+      <div class="review review-placeholder"><div class="stars">★★★★★</div><p data-lang="en">“Add a real review about deep cleaning, move-out cleaning or dryer vent cleaning.”</p><p data-lang="es">“Añada una reseña real sobre limpieza profunda, mudanza o ducto de secadora.”</p><strong data-lang="en">Customer name</strong><strong data-lang="es">Nombre del cliente</strong><em data-lang="en">Placeholder — do not publish as a real review</em><em data-lang="es">Plantilla — no publicar como testimonio real</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="kicker"><span data-lang="en">Direct contact</span><span data-lang="es">Contacto directo</span></div>
+      <h2 data-lang="en">Tell us what you need</h2>
+      <h2 data-lang="es">Cuéntenos qué necesita</h2>
+      <p data-lang="en">Roger Cabrera personally reviews requests, job details and scheduling.</p>
+      <p data-lang="es">Roger Cabrera revisa personalmente las solicitudes, los detalles del trabajo y la disponibilidad.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="tel:+17863032835"><span data-lang="en">Call</span><span data-lang="es">Llamar</span></a>
+        <a class="btn btn-outline" href="sms:+17863032835?&body=Hello%20Roger,%20I%20need%20information%20about:"><span data-lang="en">Send a text</span><span data-lang="es">Enviar texto</span></a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-row"><span>☎</span><div><strong data-lang="en">Phone</strong><strong data-lang="es">Teléfono</strong><a href="tel:+17863032835">786-303-2835</a></div></div>
+      <div class="contact-row"><span>✉</span><div><strong data-lang="en">Email</strong><strong data-lang="es">Correo</strong><a href="mailto:randemultiservices@gmail.com">randemultiservices@gmail.com</a></div></div>
+      <div class="contact-row"><span>●</span><div><strong data-lang="en">Contact</strong><strong data-lang="es">Contacto</strong>Roger Cabrera · Manager</div></div>
+      <div class="notice"><span data-lang="en">Service by phone call or text message. We do not use WhatsApp for service requests.</span><span data-lang="es">Atención por llamada o mensaje de texto. No usamos WhatsApp para solicitudes.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <span>© <span id="year"></span> R&amp;E Multiservices</span>
+    <span data-lang="en">Solutions that connect. Services that transform.</span>
+    <span data-lang="es">Soluciones que conectan. Servicios que transforman.</span>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+17863032835"><span data-lang="en">Call</span><span data-lang="es">Llamar</span></a>
+  <a href="sms:+17863032835?&body=Hello%20Roger,%20I%20need%20a%20quote%20for:"><span data-lang="en">Text</span><span data-lang="es">Enviar texto</span></a>
+</div>
+
+<script>
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+  localStorage.setItem('rande-language', lang);
+  document.title = lang === 'en'
+    ? 'R&E Multiservices | Mounting, Maintenance & Cleaning'
+    : 'R&E Multiservices | Montaje, mantenimiento y limpieza';
+  const smsLinks = document.querySelectorAll('a[href^="sms:"]');
+  smsLinks.forEach((link, index) => {
+    const english = [
+      'sms:+17863032835?&body=Hello%20Roger,%20I%20need%20a%20quote%20for:',
+      'sms:+17863032835?&body=Hello%20Roger,%20I%20want%20to%20send%20photos%20for%20a%20quote.',
+      'sms:+17863032835?&body=Hello%20Roger.%0AService:%20____%0AZIP%20code:%20____%0APreferred%20date:%20____',
+      'sms:+17863032835?&body=Hello%20Roger,%20I%20need%20information%20about:',
+      'sms:+17863032835?&body=Hello%20Roger,%20I%20need%20a%20quote%20for:'
+    ];
+    const spanish = [
+      'sms:+17863032835?&body=Hola%20Roger,%20necesito%20una%20cotización%20para:',
+      'sms:+17863032835?&body=Hola%20Roger,%20quiero%20enviar%20fotos%20para%20una%20cotización.',
+      'sms:+17863032835?&body=Hola%20Roger.%0AServicio:%20____%0ACódigo%20postal:%20____%0AFecha:%20____',
+      'sms:+17863032835?&body=Hola%20Roger,%20necesito%20información%20sobre:',
+      'sms:+17863032835?&body=Hola%20Roger,%20necesito%20una%20cotización%20para:'
+    ];
+    link.href = (lang === 'en' ? english : spanish)[index] || link.href;
+  });
+}
+document.getElementById('year').textContent = new Date().getFullYear();
+setLang(localStorage.getItem('rande-language') || 'en');
+</script>
+</body>
+</html>
